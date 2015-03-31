@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Username:
+  = @user.username
+%p
+  %b Nickname:
+  = @user.nickname
+%p
+  %b Provider:
+  = @user.billing_address
+%p
+  %b Url:
+  = @user.country
+%p
+  %b Url:
+  = @user.city
+  
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path

@@ -1,0 +1,8 @@
+- model_class = User.new.class
+%h1=t '.title', :default => model_class.model_name.human.pluralize
+%ul.nav.nav-list
+  %li= link_to "Sign in", "/users/new"
+  %li= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
+  %li= link_to "Sign in with VK", user_omniauth_authorize_path(:vkontakte)
+  /%li= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter)
+  %li= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
